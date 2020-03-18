@@ -7,18 +7,22 @@ button.addEventListener('click', calculateSum);
 
 function calculateSum(){
    let initialSum = +initial.value;
-   console.log(initialSum);
+   console.log('Изначальная сумма ' + initialSum);
    let monthlyPayment = +monthly.value;
-   console.log(monthlyPayment);
+   console.log('Ежемесячный платеж ' + monthlyPayment);
    let percentRate = +percent.value;
-   console.log(percentRate);
+   console.log('Процентная ставка ' + percentRate);
    let depositTime = +deposit.value;
-   console.log(depositTime);   
+   console.log('Время депозита ' + depositTime);   
 
    if(initialSum>0 && monthlyPayment>=0 && percentRate<100 && percentRate>0 && depositTime>0 && Number.isInteger(depositTime)){
-    //not ready 
-    
-    let result=initialSum+monthlyPayment*percentRate/12
+    let balance=initialSum;
+    let timeMonth = Math.floor(depositTime/30);
+    console.log('Месяцев ' + timeMonth);
+        for (let i=0; i<timeMonth; i++) {
+        balance=balance + monthlyPayment + (balance+monthlyPayment)*percentRate/1200;
+        }
+        alert('Ваш баланс будет ' + balance);
    }
    else {
         alert('Неверный формат');
