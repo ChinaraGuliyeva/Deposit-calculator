@@ -26,5 +26,6 @@ function calculateSum(){
    }
    else {
         console.log('Неверный формат');
+        button.insertAdjacentHTML('afterend', '<p>Неверный формат</p>');
    }
 }
