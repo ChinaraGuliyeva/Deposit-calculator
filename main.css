@@ -1,8 +1,29 @@
 .calculate-container{
     display: flex;
     flex-direction: column;
+    width: 40%;
+    padding: 50px;
+    font-family: sans serif;
+    font-size: 18px;
+}
+
+.field {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
 }
 
 button {
-    width: 100px;
+    width: 100%;
+    border: none;
+    padding: 5px;
+    background-color: green;
+    color: white;
+    font-family: sans serif;
+    font-size: 18px;
+}
+
+input {
+    width: 270px;
+    padding: 5px;
 }

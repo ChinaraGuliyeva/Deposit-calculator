@@ -26,5 +26,6 @@ function calculateSum(){
    }
    else {
         alert('Неверный формат');
+        console.log('Неверный формат');
    }
 }
